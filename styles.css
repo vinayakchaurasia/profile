@@ -82,12 +82,16 @@ p {
   color: var(--muted);
 }
 
-.about-summary {
-  font-size: 1.02rem;
-  color: var(--text);
-  line-height: 1.7;
+.about-summary-card {
   margin-bottom: 18px;
-  max-width: 960px;
+  border-left: 3px solid var(--primary);
+}
+
+.about-summary-text {
+  font-size: 1rem;
+  color: var(--text);
+  line-height: 1.75;
+  margin: 0;
 }
 
 .about-highlights-grid {
@@ -501,6 +505,14 @@ ul {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     align-items: start;
   }
+
+  .about-highlights-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .dual-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
 
 @media (max-width: 1200px) {
@@ -524,6 +536,14 @@ ul {
   }
 
   .project-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-points {
+    grid-template-columns: 1fr;
+  }
+
+  .skills-groups {
     grid-template-columns: 1fr;
   }
 }

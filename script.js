@@ -25,7 +25,7 @@ function renderHero() {
     <p class="lead">${hero.yearsOfExperience} years of experience in ${hero.techHighlight}.</p>
     <div class="actions">
       <a class="btn btn-primary" href="${hero.linkedin}" target="_blank" rel="noopener noreferrer">🔗 LinkedIn</a>
-      <a class="btn btn-secondary" href="${hero.resumeFile}" target="_blank" rel="noopener noreferrer">📄 Resume</a>
+      <a class="btn btn-secondary" href="${hero.resumeFile}?v=${Date.now()}" target="_blank" rel="noopener noreferrer">📄 Resume</a>
     </div>
     <ul class="quick-meta">
       <li>📍 ${hero.location}</li>
@@ -52,8 +52,13 @@ function renderHero() {
 }
 
 function renderAbout() {
+  const resolvedSummary = (aboutSummary || "").replace("{years}", hero.yearsOfExperience || "");
+
   const summaryEl = document.getElementById("aboutSummary");
-  if (summaryEl) summaryEl.textContent = aboutSummary;
+  if (summaryEl) {
+    summaryEl.className = "panel about-summary-card";
+    summaryEl.innerHTML = `<p class="about-summary-text">${resolvedSummary}</p>`;
+  }
 
   const highlightsGrid = document.getElementById("aboutHighlights");
   aboutHighlights.forEach((h) => {

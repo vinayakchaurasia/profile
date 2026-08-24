@@ -21,7 +21,7 @@ window.profileData = {
       "15% call wrap-up reduction with AI"
     ]
   },
-  aboutSummary: "Software Engineer with 5.8+ years of experience designing and delivering scalable, cloud-native systems using Java, Spring Boot, Microservices, Kafka, Redis, AWS, Docker, and Kubernetes. Specialized in event-driven architecture, real-time analytics, and AI-powered backend solutions with a track record of improving throughput, reducing latency, and driving operational excellence.",
+  aboutSummary: "Software Engineer with {years} years of experience designing and delivering scalable, cloud-native systems using Java, Spring Boot, Microservices, Kafka, Redis, AWS, Docker, and Kubernetes. Specialized in event-driven architecture, real-time analytics, and AI-powered backend solutions with a track record of improving throughput, reducing latency, and driving operational excellence.",
   aboutHighlights: [
     { icon: "⚙️", title: "Backend & APIs", desc: "Java · Spring Boot · gRPC · REST APIs · Reactive (Project Reactor)" },
     { icon: "☁️", title: "Cloud & DevOps", desc: "AWS · Kubernetes · Docker · Harness · Jenkins · CI/CD" },
