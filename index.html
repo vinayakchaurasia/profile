@@ -36,56 +36,19 @@
   <main id="home">
     <section class="section hero">
       <div class="container hero-grid">
-        <article class="panel hero-main">
-          <p class="tag">Software Engineer | Java Backend | Cloud & AI</p>
-          <h1>I build reliable, high-scale backend systems for real-time products.</h1>
-          <p class="lead">
-            5.8+ years of experience in Java, Spring Boot, Microservices, Kafka, Redis, AWS,
-            Docker, Kubernetes, and AI integration with OpenAI.
-          </p>
-          <div class="actions">
-            <a class="btn btn-primary" href="https://www.linkedin.com/in/vinayakchaurasia" target="_blank" rel="noopener noreferrer">🔗 LinkedIn</a>
-            <a class="btn btn-secondary" href="Vinayak-Chaurasia_Resume.pdf" target="_blank" rel="noopener noreferrer">📄 Resume</a>
-          </div>
-          <ul class="quick-meta">
-            <li>📍 Bangalore, India</li>
-            <li>✉️ vinayakchaurasia1999@gmail.com</li>
-            <li>📞 +91 9167171386</li>
-          </ul>
-        </article>
-
-        <aside class="hero-side">
-          <article class="panel profile-card">
-            <img class="profile-image" src="profile pics.jpg" alt="Vinayak Chaurasia profile image">
-            <div class="profile-copy">
-              <h3>Vinayak Chaurasia</h3>
-              <p>Java Backend Engineer</p>
-              <p>Microservices · Reactive · Cloud</p>
-            </div>
-          </article>
-
-          <article class="panel compact impact-card">
-            <h3>Impact Snapshot</h3>
-            <ul>
-              <li>10,000 msgs/sec Kafka processing</li>
-              <li>50% release cycle reduction</li>
-              <li>30% infrastructure efficiency improvement</li>
-              <li>15% call wrap-up reduction with AI</li>
-            </ul>
-          </article>
-        </aside>
+        <article class="panel hero-main" id="heroMain"></article>
+        <aside class="hero-side" id="heroSide"></aside>
       </div>
     </section>
 
     <section class="section" id="about">
       <div class="container">
         <h2>About</h2>
-        <div class="about-layout">
-          <div class="about-copy" id="aboutCopy"></div>
-          <div class="about-expertise">
-            <h3>Core Expertise</h3>
-            <ul class="about-points" id="aboutPoints"></ul>
-          </div>
+        <p class="about-summary" id="aboutSummary"></p>
+        <div class="about-highlights-grid" id="aboutHighlights"></div>
+        <div class="about-expertise">
+          <h3>Core Expertise</h3>
+          <ul class="about-points" id="aboutPoints"></ul>
         </div>
       </div>
     </section>

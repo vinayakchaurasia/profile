@@ -1,9 +1,34 @@
 window.profileData = {
-  aboutParagraphs: [
-    "Software Engineer with 5.8+ years of experience designing and building scalable, cloud-native applications using Java, Spring Boot, Microservices, Kafka, Redis, AWS, Docker, and Kubernetes.",
-    "I specialize in developing distributed systems, event-driven architectures, and high-performance backend services that power real-time analytics and business-critical applications. My experience includes designing and building REST and gRPC APIs, developing Kafka-based streaming solutions, implementing reactive systems using Project Reactor, and optimizing application performance, scalability, and reliability.",
-    "I have experience integrating AI capabilities into enterprise applications, including building OpenAI-powered call summarization solutions that improved agent productivity and reduced call wrap-up time. Additionally, I have driven observability initiatives using Datadog, Grafana, and Prometheus, enabling proactive monitoring, faster incident resolution, and improved system reliability.",
-    "Prior to working on cloud-native platforms, I gained experience in the Capital Markets domain, building solutions for securities trading and portfolio management systems. I enjoy solving complex engineering challenges, driving architectural improvements, mentoring engineers, and leveraging modern technologies to build scalable, resilient, and impactful products."
+  hero: {
+    name: "Vinayak Chaurasia",
+    designation: "Software Engineer",
+    tagline: "Java Backend | Cloud & AI",
+    headline: "I build reliable, high-scale backend systems for real-time products.",
+    yearsOfExperience: "5.8+",
+    techHighlight: "Java, Spring Boot, Microservices, Kafka, Redis, AWS, Docker, Kubernetes, and AI integration with OpenAI",
+    profileSubtitle: "Java Backend Engineer",
+    profileStack: "Microservices · Reactive · Cloud",
+    profileImage: "profile pics.jpg",
+    location: "Bangalore, India",
+    email: "vinayakchaurasia1999@gmail.com",
+    phone: "+91 9167171386",
+    linkedin: "https://www.linkedin.com/in/vinayakchaurasia",
+    resumeFile: "Vinayak-Chaurasia_Resume.pdf",
+    impactSnapshots: [
+      "10,000 msgs/sec Kafka processing",
+      "50% release cycle reduction",
+      "30% infrastructure efficiency improvement",
+      "15% call wrap-up reduction with AI"
+    ]
+  },
+  aboutSummary: "Software Engineer with 5.8+ years of experience designing and delivering scalable, cloud-native systems using Java, Spring Boot, Microservices, Kafka, Redis, AWS, Docker, and Kubernetes. Specialized in event-driven architecture, real-time analytics, and AI-powered backend solutions with a track record of improving throughput, reducing latency, and driving operational excellence.",
+  aboutHighlights: [
+    { icon: "⚙️", title: "Backend & APIs", desc: "Java · Spring Boot · gRPC · REST APIs · Reactive (Project Reactor)" },
+    { icon: "☁️", title: "Cloud & DevOps", desc: "AWS · Kubernetes · Docker · Harness · Jenkins · CI/CD" },
+    { icon: "📨", title: "Data & Streaming", desc: "Apache Kafka · Redis · MySQL · MongoDB · Event-Driven Architecture" },
+    { icon: "🤖", title: "AI & LLM Integration", desc: "OpenAI APIs · RAG · Prompt Engineering · GitHub Copilot" },
+    { icon: "📊", title: "Observability", desc: "Datadog · Grafana · Prometheus · Spring Boot Actuator" },
+    { icon: "🏛️", title: "System Design", desc: "Microservices · SOLID · High-Level & Low-Level Design · Scalability" }
   ],
   coreExpertise: [
     "✅ Cloud-Native Architecture",

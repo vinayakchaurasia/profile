@@ -1,6 +1,8 @@
 const profileData = window.profileData || {};
 
-const aboutParagraphs = profileData.aboutParagraphs || [];
+const hero = profileData.hero || {};
+const aboutSummary = profileData.aboutSummary || "";
+const aboutHighlights = profileData.aboutHighlights || [];
 const coreExpertise = profileData.coreExpertise || [];
 const skillsByCategory = profileData.skillsByCategory || [];
 const experience = profileData.experience || [];
@@ -15,16 +17,59 @@ function createChip(skill) {
   return chip;
 }
 
-function renderAbout() {
-  const aboutCopy = document.getElementById("aboutCopy");
-  const aboutPoints = document.getElementById("aboutPoints");
+function renderHero() {
+  const heroMain = document.getElementById("heroMain");
+  heroMain.innerHTML = `
+    <p class="tag">${hero.designation} | ${hero.tagline}</p>
+    <h1>${hero.headline}</h1>
+    <p class="lead">${hero.yearsOfExperience} years of experience in ${hero.techHighlight}.</p>
+    <div class="actions">
+      <a class="btn btn-primary" href="${hero.linkedin}" target="_blank" rel="noopener noreferrer">🔗 LinkedIn</a>
+      <a class="btn btn-secondary" href="${hero.resumeFile}" target="_blank" rel="noopener noreferrer">📄 Resume</a>
+    </div>
+    <ul class="quick-meta">
+      <li>📍 ${hero.location}</li>
+      <li>✉️ ${hero.email}</li>
+      <li>📞 ${hero.phone}</li>
+    </ul>
+  `;
 
-  aboutParagraphs.forEach((paragraph) => {
-    const p = document.createElement("p");
-    p.textContent = paragraph;
-    aboutCopy.appendChild(p);
+  const heroSide = document.getElementById("heroSide");
+  heroSide.innerHTML = `
+    <article class="panel profile-card">
+      <img class="profile-image" src="${hero.profileImage}" alt="${hero.name} profile image">
+      <div class="profile-copy">
+        <h3>${hero.name}</h3>
+        <p>${hero.profileSubtitle}</p>
+        <p>${hero.profileStack}</p>
+      </div>
+    </article>
+    <article class="panel compact impact-card">
+      <h3>Impact Snapshot</h3>
+      <ul>${(hero.impactSnapshots || []).map((item) => `<li>${item}</li>`).join("")}</ul>
+    </article>
+  `;
+}
+
+function renderAbout() {
+  const summaryEl = document.getElementById("aboutSummary");
+  if (summaryEl) summaryEl.textContent = aboutSummary;
+
+  const highlightsGrid = document.getElementById("aboutHighlights");
+  aboutHighlights.forEach((h) => {
+    const card = document.createElement("article");
+    card.className = "about-highlight-card";
+    card.innerHTML = `
+      <span class="highlight-icon">${h.icon}</span>
+      <div>
+        <h4>${h.title}</h4>
+        <p>${h.desc}</p>
+      </div>
+    `;
+    highlightsGrid.appendChild(card);
   });
 
+  const aboutPoints = document.getElementById("aboutPoints");
   coreExpertise.forEach((point) => {
     const li = document.createElement("li");
     li.textContent = point;
@@ -220,6 +265,7 @@ function setYear() {
 }
 
 function init() {
+  renderHero();
   renderAbout();
   renderSkills();
   renderExperience();
