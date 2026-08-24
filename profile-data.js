@@ -1,10 +1,10 @@
 window.profileData = {
   hero: {
     name: "Vinayak Chaurasia",
-    designation: "Software Engineer",
+    designation: "Software Engineer | Research & Development Engineer",
     tagline: "Java Backend | Cloud & AI",
     headline: "I build reliable, high-scale backend systems for real-time products.",
-    yearsOfExperience: "5.9+",
+    yearsOfExperience: "5.8+",
     techHighlight: "Java, Spring Boot, Microservices, Kafka, Redis, AWS, Docker, Kubernetes, and AI integration with OpenAI",
     profileSubtitle: "Java Backend Engineer",
     profileStack: "Microservices · Reactive · Cloud",
