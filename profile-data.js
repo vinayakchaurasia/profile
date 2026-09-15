@@ -91,6 +91,7 @@ window.profileData = {
         "CI/CD",
         "Git",
         "Maven",
+        "Gradle",
         "Datadog",
         "Grafana",
         "Prometheus"
