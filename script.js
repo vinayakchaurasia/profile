@@ -23,15 +23,17 @@ function renderHero() {
     <p class="tag">${hero.designation} | ${hero.tagline}</p>
     <h1>${hero.headline}</h1>
     <p class="lead">${hero.yearsOfExperience} years of experience in ${hero.techHighlight}.</p>
-    <div class="actions">
-      <a class="btn btn-primary" href="${hero.linkedin}" target="_blank" rel="noopener noreferrer">🔗 LinkedIn</a>
-      <a class="btn btn-secondary" href="${hero.resumeFile}?v=${Date.now()}" target="_blank" rel="noopener noreferrer">📄 Resume</a>
+    <div class="hero-meta-row">
+      <div class="actions">
+        <a class="btn btn-primary" href="${hero.linkedin}" target="_blank" rel="noopener noreferrer">🔗 LinkedIn</a>
+        <a class="btn btn-secondary" href="${hero.resumeFile}?v=${Date.now()}" target="_blank" rel="noopener noreferrer">📄 Resume</a>
+      </div>
+      <ul class="quick-meta">
+        <li>📍 ${hero.location}</li>
+        <li>✉️ ${hero.email}</li>
+        <li>📞 ${hero.phone}</li>
+      </ul>
     </div>
-    <ul class="quick-meta">
-      <li>📍 ${hero.location}</li>
-      <li>✉️ ${hero.email}</li>
-      <li>📞 ${hero.phone}</li>
-    </ul>
   `;
 
   const heroSide = document.getElementById("heroSide");
